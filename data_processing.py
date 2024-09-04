@@ -27,14 +27,14 @@ Each row after the header contains the population data for a specific region ove
    - Use pandas to read the CSV file named "people_output.csv".
 
 2. Compute Statistics:
-   - For each region, compute the average, maximum, and minimum population over the last 10 years (from columns 2023 to 2014).
-   - Iterate through all columns from 2023 to 2014 to ensure the calculations are performed for all the past 10 years.
+   - For each region (row in the DataFrame), compute the average, maximum, and minimum population over the last 10 years (from columns 2023 to 2014).
+   - Ensure that the calculations are performed **for each row (region)** and **not for each column**.
    - Add three new columns to the DataFrame with these values: "平均人口" (average population), "最大人口" (maximum population), and "最小人口" (minimum population).
 
 3. Save the Updated CSV File:
    - Save the updated DataFrame with the new columns back to a new CSV file named "people_output_updated.csv".
 
-Generate Python code only, without any explanations, comments, or unnecessary text. The output must start immediately with Python code, and there should be no headers or explanations.
+**Output only Python code** without any explanations, comments, or unnecessary text. The output must start immediately with Python code, and there should be no headers or explanations.
 """
 
 
@@ -47,8 +47,8 @@ payload = {
     "prompt": prompt,
     #"max_new_tokens": 2000,  # Increased to ensure enough tokens for complete output
     "temperature": 0,      # Lowered for more deterministic output
-    "max_length": 150,
-    #"top_p": 0.1, 
+    "max_length": 250,
+    "top_p": 0.8,
     "rep_pen": 1.1,
 }
 

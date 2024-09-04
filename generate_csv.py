@@ -6,10 +6,10 @@ file_path = '年末常住人口.txt'  # Replace with your file path
 with open(file_path, 'r', encoding='utf-8') as file:
     lines = file.readlines()
 
-data_lines = lines[4:-2]  # Keep only the data part, skip the description
+#data_lines = lines[4:-2]  # Keep only the data part, skip the description
 
 # Combine the core data
-input_text = "".join(data_lines).strip()
+input_text = "".join(lines).strip()
 
 prompt = f"""
 The following is the population data of Chinese provinces over the past 10 years. Please output the data in CSV format. 
