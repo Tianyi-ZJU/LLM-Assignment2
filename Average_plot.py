@@ -1,3 +1,4 @@
+#model: starcoder2-15b-instruct-v0.1-Q4_K_M
 import requests
 import pandas as pd
 import re
