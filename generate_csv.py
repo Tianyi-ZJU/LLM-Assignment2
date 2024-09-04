@@ -18,12 +18,12 @@ The first row should be "地区,2023年,2022年,2021年,2020年,2019年,2018年,
 Data:
 {input_text}
 
-Output the data in CSV format with one line per province, including the province name and the population data for each year.
+Output the data in CSV format with one line per province, including the province name and the population data for each year.Be careful to remove invalid information from the header and footer.
 """
 
 payload = {
     "prompt": prompt,
-    "max_new_tokens": 2000,  # Increased to ensure enough tokens for complete output
+    #"max_new_tokens": 2000,  # Increased to ensure enough tokens for complete output
     "temperature": 0,      # Lowered for more deterministic output
     "max_length": 1500,
     #"top_p": 1.0,            # Higher value to include more diverse tokens

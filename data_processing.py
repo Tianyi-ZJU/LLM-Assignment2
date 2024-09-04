@@ -34,7 +34,7 @@ Each row after the header contains the population data for a specific region ove
 3. Save the Updated CSV File:
    - Save the updated DataFrame with the new columns back to a new CSV file named "people_output_updated.csv".
 
-**Important**: Output only the **Python code** to achieve these tasks. Do not provide any explanation, comments, or extra text.
+Generate Python code only, without any explanations, comments, or unnecessary text. The output must start immediately with Python code, and there should be no headers or explanations.
 """
 
 
@@ -45,10 +45,11 @@ headers = {"Content-Type": "application/json"}
 # Define the payload for the request
 payload = {
     "prompt": prompt,
-    "max_new_tokens": 2000,  # Increased to ensure enough tokens for complete output
+    #"max_new_tokens": 2000,  # Increased to ensure enough tokens for complete output
     "temperature": 0,      # Lowered for more deterministic output
-    "max_length": 1500,
-    "top_p": 0.8, 
+    "max_length": 150,
+    #"top_p": 0.1, 
+    "rep_pen": 1.1,
 }
 
 # Step 4: Send the request to the KoboldCpp API
